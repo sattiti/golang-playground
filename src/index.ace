@@ -1,0 +1,9 @@
+= doctype html
+html lang=ja
+  head
+    meta name=viewport content="width=device-width"
+    meta charset="utf-8"
+    title {{.Title}}
+  body
+    #container.wrapper
+      h1 {{.H1}}
