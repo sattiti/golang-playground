@@ -1,0 +1,57 @@
+// vim: ft=asciidoc fenc=utf-8
+
+= Hugo
+
+== Directory Structure // {{{
+
+=== archetypes
+記事の雛形の定義ファイル用。
+
+=== assets
+Hugo Pipes で処理が必要なファイル用。
+
+=== config
+環境設定ファイル用。
+
+----
+  config
+    _default
+      config.toml
+      languages.toml
+      menus.en.toml
+      menus.ja.toml
+      params.toml
+    production
+      config.toml
+      params.toml
+    staging
+      config.toml
+      params.toml
+----
+
+=== content
+md ファイル(記事)用。
+
+=== data
+Hugo 内で使用するすべてのデータ用。
+
+=== layouts
+レイアウト(html)用。
+
+=== public
+公開用一式。
+
+=== resources
+とくにユーザーが触る必要ない。Hugo が処理をする際に使う。
+
+=== static
+img, css, js 等の静的ファイル用。
+デプロイ時にすべてのファイルが public にコピーされる。
+
+=== themes
+テーマ一式を格納する。
+
+=== config.toml
+設定ファイル。
+
+// }}}
