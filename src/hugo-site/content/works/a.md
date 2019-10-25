@@ -1,7 +1,7 @@
 ---
 title: "Work"
 date: 2019-10-23T15:37:12+09:00
-draft: true
+draft: false
 
 # Page level Params.
 # Use .Params 
