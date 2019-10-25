@@ -5,8 +5,6 @@ baseURL: ""
 # Site title
 title: "My New Site"
 
-copyright = "Copyright . All rights reserved."
-
 # Theme to use (located by default in /themes/THEMENAME/).
 # theme: ""
 
@@ -101,6 +99,27 @@ permalinks:
 #  - 
 
 
+# Menu
+menu:
+  gnav:
+    - name: home
+      identifier: "home"
+      url: "/"
+      weight: 1
+    - name: about
+      identifier: "about"
+      url: "/about/"
+      weight: 2
+    - name: works
+      identifier: "works"
+      url: "/works/"
+      weight: 3
+    - name: a
+      parent: "works"
+      url: "/works/a/"
+      weight: 1
+
+
 # SEO
 # enableRobotsTXT: false
 
@@ -139,10 +158,10 @@ defaultContentLanguage: "ja"
 # disableLanguages: 
 #  - "cn"
 
-languages:
-  ja:
-    languageName: "Japanese"
-    languageCode: "ja-jp"
+# languages:
+#   ja:
+languageName: "Japanese"
+languageCode: "ja-jp"
 
 
 # Module

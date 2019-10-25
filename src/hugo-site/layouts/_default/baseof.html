@@ -4,13 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ .Title }}</title>
-{{ partial "stylesheet" }}
+{{ partial "stylesheet" . }}
 </head>
 <body>
+  <header>
+    {{ block "header" . }}
+      {{ partial "header" . }}
+    {{ end }}
+  </header>
+
   <main>
-    <p>baseof Layout</p>
     {{ block "main" . }} {{ end }}
   </main>
-  <footer></footer>
+
+  <footer>
+    {{ block "footer" . }}
+      {{ partial "footer" . }}
+    {{ end }}
+  </footer>
+
+  {{ partial "javascript" . }}
 </body>
 </html>
