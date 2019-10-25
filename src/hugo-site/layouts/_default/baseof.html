@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ .Title }}</title>
+{{ partial "stylesheet" }}
+</head>
+<body>
+  <main>
+    <p>baseof Layout</p>
+    {{ block "main" . }} {{ end }}
+  </main>
+  <footer></footer>
+</body>
+</html>
