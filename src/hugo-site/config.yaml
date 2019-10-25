@@ -5,6 +5,8 @@ baseURL: ""
 # Site title
 title: "My New Site"
 
+copyright = "Copyright . All rights reserved."
+
 # Theme to use (located by default in /themes/THEMENAME/).
 # theme: ""
 
