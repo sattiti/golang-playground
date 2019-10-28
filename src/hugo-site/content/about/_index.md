@@ -1,8 +1,11 @@
 ---
 title: "About"
-date: 2019-10-25T11:05:43+09:00
+h1: "About Index"
+date: 
 draft: false
 ---
 
-## About
-about index about index
+## h2
+text text text  
+text text text  
+text text text  

@@ -1,1 +1,3 @@
-<link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+{{ $css := resources.Get "sass/style.sass" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

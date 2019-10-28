@@ -2,8 +2,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <h2>Home</h2>
-  <p>{{ printf "%#v" .Page.URLPath.URL }}</p>
+  {{ .Content }}
 {{ end }}
 
 {{ define "footer" }}

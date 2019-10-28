@@ -1,6 +1,6 @@
 ---
-title: "a | Works"
-h1: "A"
+title: "Works"
+h1: "Works Index"
 date: 
 draft: false
 ---

@@ -8,15 +8,35 @@
 </head>
 <body>
   <header>
+    <h1>{{ .Params.H1 }}</h1>
+    {{- if .IsHome -}}
+    <p><span class="templatelabel baseoftype">{{- print "Baseof" -}}</span></p>
+    {{- else if .IsNode -}}
+      <p><span class="templatelabel listtype">{{- print "List" -}}</span></p>
+    {{- else -}}
+      <p><span class="templatelabel singletype">{{- print "Single" -}}</span></p>
+    {{- end -}}
     {{ block "header" . }}
       {{ partial "header" . }}
     {{ end }}
   </header>
 
+  <hr>
   <main>
+    {{ $lists := (dict "Type" .Type "Kind" .Kind "IsPage" .IsPage "IsNode" .IsNode "URL" .URL "Section" .Section "IsHome" .IsHome) }}
+    <table>
+      {{ range $k, $v := $lists }}
+      <tr>
+        <th>{{ $k }}</th>
+        <td>{{ $v }}</td>
+      </tr>
+      {{ end }}
+    </table>
+
     {{ block "main" . }} {{ end }}
   </main>
 
+  <hr>
   <footer>
     {{ block "footer" . }}
       {{ partial "footer" . }}
