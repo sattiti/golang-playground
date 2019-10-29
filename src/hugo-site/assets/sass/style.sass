@@ -1,9 +1,47 @@
 @charset "utf-8"
 
+$seColor0: #4A4A40
+$seColor1: #696A58
+$seColor2: #804260
+$seColor3: #828375
+$seColor4: #FFFDEC
+
+$pmColor0: #0B132B
+$pmColor1: #1C2541
+$pmColor2: #3A506B
+$pmColor3: #5BC0BE
+$pmColor4: #6FFFE9
+
+$thColor0: #465892
+$thColor1: #546DA6
+$thColor2: #6D5593
+$thColor3: #968EAF
+$thColor4: #BBC1C6
+
+$grey33: #333
+$grey44: #444
+$grey66: #666
+$grey88: #888
+$greyaa: #aaa
+$greybb: #bbb
+$greycc: #ccc
+$greyf7: #f7f7f7
+$greyf9: #f9f9f9
+
+%plr2
+  padding-left: 2rem
+  padding-right: 2rem
+
+%br6
+  border-radius: 6px
+
 *,
 *::before,
 *::after
   box-sizing: border-box
+
+body
+  background-color: $pmColor0
 
 body,
 h1,h2,h3,h4,h5,h6,
@@ -19,7 +57,7 @@ table
   margin: 0
   padding: 0
 
-body,
+code, pre,
 h1,h2,h3,h4,h5,h6,
 p,
 dl,
@@ -27,6 +65,28 @@ ul,
 ol,
 table
   margin-top: 2rem
+  line-height: 1.5
+  color: $thColor4
+
+code
+  @extend %br6
+  background-color: $seColor2
+  padding: .4rem
+  font-size: 1rem
+  color: $thColor4
+
+pre
+  @extend %br6
+  background-color: $pmColor0
+  padding: 1rem
+  code
+    background-color: transparent
+    border-radius: 0
+
+a
+  color: $pmColor3
+  text-decoration: none
+  &:hover
 
 ul li,
 ol li,
@@ -38,13 +98,14 @@ h1
   font-size: 2.5rem
 
 h2
+  @extend %br6
   font-size: 2rem
-  background-color: #ffeded
-  padding: .5rem
+  background-color: $pmColor2
+  padding: .4rem 1rem
 
 h3
   font-size: 1.5rem
-  border-bottom: 2px dashed #ccc
+  border-bottom: 1px dashed $thColor4
   padding: .5rem
 
 h4
@@ -56,56 +117,78 @@ h5
 h6
   font-size: .85rem
 
-hr
-  border: none
-  height: 1px
-  background-color: black
-  margin: 0
-  padding: 0
-  display: block
-  clear: both
-
-
 table,
 table tr th,
 table tr td
   border-collapse: collapse
-  border: 1px solid #ddd
+  border: 1px solid $pmColor0
 
 table
   width: 100%
   tr
     th, td
-      background-color: #ffe
       text-align: left
       padding: .5rem
       text-align: left
-      padding: .5rem
     th
       width: 20%
+      background-color: $seColor2
     td
-      background-color: white
+      background-color: $pmColor1
 
 #container
-  margin: 1rem
+  display: flex
+  justify-content: space-between
+  background-color: $pmColor1
+  aside
+    @extend %plr2
+    width: 20%
+    padding-bottom: 2rem
+    background-color: $pmColor2
+    padding-bottom: 4rem
+    nav
+      ul
+        li
+          font-weight: bold
+          font-size: 1.25rem
+          list-style: none
+          margin-left: 0
+          ul
+            margin-top: 0
+            li
+              margin-left: 1.5rem
+  main
+    @extend %plr2
+    width: 80%
+    padding-bottom: 4rem
 
-header,
-main,
+.wrapper
+  margin-left: 2rem
+  margin-right: 2rem
+
+header
+  margin-top: 0
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .25)
+  h1
+    margin-top: 0
+
 footer
-  margin: 2rem 10rem
+  padding-bottom: 2rem
 
 .templabel
-  color: white
+  border-radius: 6px
+  font-size: 1rem
+  margin-left: 1rem
+  padding: .2rem 1rem
 
 .baseoftype
-  background-color: purple
-  color: white
+  background-color: $pmColor1
 
 .listtype
-  background-color: lime
+  background-color: $seColor1
 
 .singletype
-  background-color: magenta
+  background-color: $thColor1
 
 dl
   dt

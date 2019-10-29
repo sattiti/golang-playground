@@ -1,1 +1,14 @@
-{{ block "gnav" . }} {{ end }}
+{{ $type := "Baseof" }}
+{{ $cls  := "baseoftype" }}
+{{ if .IsHome }}
+  {{ $type = "Baseof" }}
+  {{ $cls  = "baseoftype" }}
+{{ else if .IsNode -}}
+  {{ $type = "List" }}
+  {{ $cls  = "listtype" }}
+{{ else }}
+  {{ $type = "Single" }}
+  {{ $cls  = "singletype" }}
+{{ end }}
+
+<h1>{{- .Params.H1 -}} <span class="templabel {{ $cls }}">{{ $type }}</span></h1>

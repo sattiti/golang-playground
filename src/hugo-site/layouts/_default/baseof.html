@@ -8,39 +8,31 @@
 </head>
 <body>
   <header>
-    <h1>{{ .Params.H1 }}</h1>
-    {{- if .IsHome -}}
-    <p><span class="templatelabel baseoftype">{{- print "Baseof" -}}</span></p>
-    {{- else if .IsNode -}}
-      <p><span class="templatelabel listtype">{{- print "List" -}}</span></p>
-    {{- else -}}
-      <p><span class="templatelabel singletype">{{- print "Single" -}}</span></p>
-    {{- end -}}
-    {{ block "header" . }}
-      {{ partial "header" . }}
-    {{ end }}
+    <div class="wrapper">
+      {{ block "header" . }}
+        {{ partial "header" . }}
+      {{ end }}
+    </div>
   </header>
 
-  <hr>
-  <main>
-    {{ $lists := (dict "Type" .Type "Kind" .Kind "IsPage" .IsPage "IsNode" .IsNode "URL" .URL "Section" .Section "IsHome" .IsHome) }}
-    <table>
-      {{ range $k, $v := $lists }}
-      <tr>
-        <th>{{ $k }}</th>
-        <td>{{ $v }}</td>
-      </tr>
-      {{ end }}
-    </table>
+  <div id="container">
+    <aside>
+      {{ partial "gnav" . }}
+    </aside>
 
-    {{ block "main" . }} {{ end }}
-  </main>
+    <main>
+      <div id="content">
+        {{ block "main" . }} {{ end }}
+      </div>
+    </main>
+  </div>
 
-  <hr>
   <footer>
-    {{ block "footer" . }}
-      {{ partial "footer" . }}
-    {{ end }}
+    <div class="wrapper">
+      {{ block "footer" . }}
+        {{ partial "footer" . }}
+      {{ end }}
+    </div>
   </footer>
 
   {{ partial "javascript" . }}
