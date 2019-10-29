@@ -1,11 +1,13 @@
 {{ $lists := (dict "Permalink" .Permalink  "RelPermalink" .RelPermalink "URL" .URL "Type" .Type "Kind" .Kind "IsPage" .IsPage "IsNode" .IsNode "Section" .Section "IsHome" .IsHome) }}
 
-<h3 id="information">Information</h3>
-<table>
-  {{ range $k, $v := $lists }}
-  <tr>
-    <th>{{ $k }}</th>
-    <td>{{ $v }}</td>
-  </tr>
-  {{ end }}
-</table>
+<div class="column">
+  <h3 id="information">Information</h3>
+  <table>
+    {{ range $k, $v := $lists }}
+    <tr>
+      <th>{{ $k }}</th>
+      <td>{{ $v }}</td>
+    </tr>
+    {{ end }}
+  </table>
+</div>

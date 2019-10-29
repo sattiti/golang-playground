@@ -12,7 +12,10 @@ copyright: "Copyright. All rights reserved."
 # theme: ""
 
 # Enable to turn relative URLs into absolute.
-# canonifyURLs: false
+canonifyURLs: true
+
+blackfriday:
+  hrefTargetBlank: true
 
 # Enable this to make all relative URLs relative to content root
 # relativeURLs: true

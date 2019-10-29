@@ -87,6 +87,8 @@ a
   color: $pmColor3
   text-decoration: none
   &:hover
+    background-color: $thColor0!important
+
 
 ul li,
 ol li,
@@ -134,7 +136,7 @@ table
       width: 20%
       background-color: $seColor2
     td
-      background-color: $pmColor1
+      background-color: $seColor0
 
 #container
   display: flex
@@ -142,7 +144,7 @@ table
   background-color: $pmColor1
   aside
     @extend %plr2
-    width: 20%
+    width: 24%
     padding-bottom: 2rem
     background-color: $pmColor2
     padding-bottom: 4rem
@@ -150,16 +152,24 @@ table
       ul
         li
           font-weight: bold
-          font-size: 1.25rem
           list-style: none
           margin-left: 0
+          a
+            @extend %br6
+            display: block
+            background-color: $pmColor1
+            padding: .4rem 1rem
+            margin-bottom: 1px
           ul
             margin-top: 0
             li
-              margin-left: 1.5rem
+              font-weight: normal
+              margin-left: 1rem
+              a
+                background-color: transparent
   main
     @extend %plr2
-    width: 80%
+    width: 76%
     padding-bottom: 4rem
 
 .wrapper
@@ -196,3 +206,9 @@ dl
 
 p#cpright
   text-align: center
+
+.column
+  @extend %br6
+  padding: 0 2rem 2rem
+  margin-top: 2rem
+  border: 1px solid $pmColor3
