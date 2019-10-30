@@ -149,3 +149,10 @@ ___WORD___
 ```plain
 <!-- COMMENTS -->
 ```
+
+### raw html
+```html
+<div class="bk">
+  <p>hello world</p>
+</div>
+```
