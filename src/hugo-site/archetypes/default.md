@@ -5,4 +5,9 @@ draft: false
 h1: {{  title }}
 linkTitle: ""
 weight: 2
+tags: ["", ""]
+categories: ["", ""]
 ---
+
+## {{ .Title }}
+

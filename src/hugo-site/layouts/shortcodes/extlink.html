@@ -1,0 +1,17 @@
+<a
+  {{ if .Get "id" -}}
+    id="{{ .Get "id" }}"
+  {{- end -}}
+
+  {{ if .Get "class" -}}
+    class="{{ .Get "class" }}"
+  {{- end -}}
+
+  href="{{ .Get "href" }}" target="_blank">
+
+  {{- if .Get "hasSpan" -}}
+    <span>{{- .Get "linkTitle" -}}</span>
+  {{- else -}}
+    {{- .Get "linkTitle" -}}
+  {{- end -}}
+</a>

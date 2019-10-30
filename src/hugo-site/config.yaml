@@ -12,7 +12,7 @@ copyright: "Copyright. All rights reserved."
 # theme: ""
 
 # Enable to turn relative URLs into absolute.
-canonifyURLs: true
+# canonifyURLs: true
 
 blackfriday:
   hrefTargetBlank: true
@@ -212,7 +212,7 @@ languageCode: "ja-jp"
 # The path element used during pagination.
 # paginatePath: "page"
 
-# enableInlineShortcodes: false
+enableInlineShortcodes: true
 # enableMissingTranslationPlaceholders: false
 
 
