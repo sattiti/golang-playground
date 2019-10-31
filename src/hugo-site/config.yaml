@@ -71,6 +71,8 @@ enableEmoji: true
 # Watch filesystem for changes and recreate as needed
 # watch: false
 
+# syntax hightlight
+pygmentsUseClassic: true
 
 # Permalinks
 # :year        the 4 digit year

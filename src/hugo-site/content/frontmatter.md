@@ -7,7 +7,7 @@ linkTitle: "Front matter"
 weight: 1
 ---
 
-## User-Defined Variables
+## User defined Variables
 任意のキー、値を指定することができる。  
 `.Params` よりアクセスすることができる。
 ```yaml
@@ -20,7 +20,7 @@ h2: bbb
 ```
 
 
-## Front matter Pre-defined Variables
+## Pre-defined Variables
 
 ### cascade
 オーバーライトしない限り、子孫ページまで辿りづくことができる map。  

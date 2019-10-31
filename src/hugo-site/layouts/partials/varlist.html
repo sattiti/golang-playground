@@ -9,5 +9,13 @@
       <td>{{ $v }}</td>
     </tr>
     {{ end }}
+
+    {{ range $k, $v := .Resources }}
+    <tr>
+      <th>{{ $k }}</th>
+      <td>{{ $v }}</td>
+    </tr>
+    {{ end }}
   </table>
+  <p>Recources: {{ .Resources | len }}</p>
 </div>

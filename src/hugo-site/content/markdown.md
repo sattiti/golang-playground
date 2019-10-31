@@ -6,7 +6,6 @@ draft: false
 linkTitle: "Markdown"
 weight: 1
 ---
-
 ## Markdown
 
 ### hx
@@ -57,6 +56,7 @@ ___WORD___
 
 ### List
 #### ul
+{{% highlight md %}}
 ``` plain
 - 1
 - 2
@@ -70,6 +70,7 @@ ___WORD___
 - 3
 - 4
 ```
+{{% /highlight %}}
 
 #### ol
 ``` plain

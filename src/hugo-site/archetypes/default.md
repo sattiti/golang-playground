@@ -1,13 +1,30 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+keywords:
+desscription:
+isCJKLanguage: true
 date: {{ .Date }}
+publishDate:
+expriyDate:
+lastmod: {{ .Date }}
 draft: false
-h1: {{  title }}
 linkTitle: ""
 weight: 2
-tags: ["", ""]
-categories: ["", ""]
+# resources:
+#  - name:
+#    title:
+#    params:
+#      width:
+#      height:
+# tags:
+#   -
+# categories:
+#   -
+# images:
+#   -
+
+h1: {{ .Name }}
 ---
 
-## {{ .Title }}
+## 
 
