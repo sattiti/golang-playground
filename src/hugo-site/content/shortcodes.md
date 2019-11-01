@@ -43,10 +43,10 @@ Markdown 中で呼び出すことができるスニペット。
 {{\< /SHORTCODE >}}
 ```
 
-### Nested Shortcodes
+## Nested Shortcodes
 `.Parent` を使って親コンテキストを確認することができる。
 
-### Built-in shortcodes
+## Built-in shortcodes
 - figure (html5 figure に相当)
 - gist (gist を取得する)
 - hightlight (hightlight language)
@@ -56,3 +56,42 @@ Markdown 中で呼び出すことができるスニペット。
 - tweet (twitter を取得する)
 - vimeo
 - youtube
+
+## Custom Shortcodes
+### Parameters
+`.Get PARAM1` メソッドを使ってパラメータを取得する。
+```
+.Get 0
+.Get 1
+.Get "message"
+```
+
+### .Inner
+`{{ .Inner }}` は開始と終了タグの間の内容が処理されずありのまま展開する。
+```html
+
+# raw というショートカットとして、
+<div class="{{.Get "class"}}">
+  {{.Inner}}
+</div>
+
+# <p>aaa</p> はそのまま展開する。
+{{\< raw class="img" >}}
+<p>aaa</p>
+{{\</ raw >}}
+```
+
+### .Params
+以下プロパティを使いそれぞれにアクセスすることができる。
+```plain
+.Params
+$.Params
+$.Page.Params
+$.Page.Site.Params
+```
+
+### .IsNamedParams
+名前付きのパラメータかどうか、チェックすることができる。
+
+### .HasShortcode
+ショートコードがあるかチェックすることができる。

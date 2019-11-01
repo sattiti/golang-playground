@@ -8,11 +8,15 @@ weight: 1
 ---
 
 ## Links
+- [Hugo Functions][hugoFunc]
+- [Hugo Variables][hugoVar]
 - [Hugo Offical Documentation][HugoOfficalDoc]
 - [Netlify Doc][netlify]
 - [Hugo 日本語][HugoJaDoc]
 - {{< extlink href="https://www.google.co.jp/" linkTitle="Google" >}}
 
+[hugoFunc]: https://gohugo.io/functions/
+[hugoVar]: https://gohugo.io/variables/
 [netlify]: https://learn.netlify.com/en/basics/
 [HugoOfficalDoc]: https://gohugo.io/documentation/
 [HugoJADoc]: https://note.yuuniworks.com/study/hugo.html
