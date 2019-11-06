@@ -21,6 +21,30 @@ weight: 1
 [HugoOfficalDoc]: https://gohugo.io/documentation/
 [HugoJADoc]: https://note.yuuniworks.com/study/hugo.html
 
+## Env
+Default environments are **development** with `hugo serve` and **production** with `hugo`.
+
+```sh
+hugo --enviroment ENV_NAME
+```
+
+## Configuration Directory Structure
+```plain
+/
+    /config
+        /_default
+            /config.toml
+            /languages.toml
+            /menus.en.toml
+            /menus.ja.toml
+            /params.toml
+        /production
+            /config.toml
+            /params.toml
+        /staging
+            /config.toml
+            /params.toml
+```
 
 ## Basic Usages
 
