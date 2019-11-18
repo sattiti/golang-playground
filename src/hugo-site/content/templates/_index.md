@@ -7,15 +7,33 @@ linkTitle: "Templates"
 weight: 1
 ---
 
+## Section
+「フォルダ」による分類。  
+
 ## Taxonomies Definitions
+「タグ」による分類。デフォルトでは `tags` `categoies` の2つが Taxonomy として扱う。
+
+```plain
+Actor                    <- Taxonomy
+    Bruce Willis         <- Term
+        The Sixth Sense  <- Value
+        Unbreakable      <- Value
+        Moonrise Kingdom <- Value
+    Samuel L. Jackson    <- Term
+        Unbreakable      <- Value
+        The Avengers     <- Value
+        xXx              <- Value
+```
+
 ### Taxonomy (categories, category, list)
-コンテンツを分類するために使用できるカテゴリ
+コンテンツ(キーワード)を分類するために使用できるカテゴリ(キーワードの総称)。
 
 ### Term (tags, tag, list)
-分類されたカテゴリのキーの集合
+分類されたカテゴリのキーの集合(キーワードの集合)。
 
 ### Value (single)
 用語に割り当てられたコンテンツ
+
 
 ## Basic Structures
 ```plain
