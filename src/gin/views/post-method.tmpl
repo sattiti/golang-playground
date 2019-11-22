@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Post form</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<!--
+enctype="application/x-www-form-url-encoded"
+enctype="multipart/form-data"
+enctype="text/plain"
+-->
+<form action="/submit" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="message" value="hello world">
+  <p><label for="first-name">First Name: <input id="first-name" type="text" name="name[first]" value=""></label></p>
+  <p><label for="last-name">Last Name: <input id="last-name" type="text" name="name[last]" value=""></label></p>
+  <p><button type="submit">Submit</button></p>
+</form>
+</body>
+</html>
