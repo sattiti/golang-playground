@@ -17,7 +17,7 @@ func main() {
     html, err := ace.Load(tmplName, "", nil)
 
     if err != nil {
-      http.Error(c.Writer, err.Error(), http.StatusInternalServerError)
+      c.String(http.StatusBadRequest, fmt.Sprintf("Error: %s", err.Error()))
       return
     }
 
@@ -28,7 +28,7 @@ func main() {
     })
 
     if err != nil {
-      http.Error(c.Writer, err.Error(), http.StatusInternalServerError)
+      c.String(http.StatusBadRequest, fmt.Sprintf("Error: %s", err.Error()))
       return
     }
 

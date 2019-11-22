@@ -1,0 +1,20 @@
+= doctype html
+html
+  head
+    title File Upload
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+  body
+    form action="/upload" method="post" enctype="multipart/form-data"
+      p
+        label for="name" {{ print "Name:" }}
+          input id="name" type="text" name="name" value=""
+      p
+        label for="email" {{ print "Email:" }}
+          input id="email" type="text" name="email" value=""
+      p
+        label for="files" {{ print "File:" }}
+          input type="file" name="files"
+
+      p
+        button type="submit" {{ print "Submit" }}
